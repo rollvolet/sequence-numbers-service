@@ -28,6 +28,19 @@ app.post('/reset', async function(req, res) {
   res.status(204).end();
 });
 
+
+app.get('/cache', function(req, res) {
+  res.status(200).send({
+    data: {
+      type: 'sequence-number',
+      id: uuid(),
+      attributes: {
+        value: sequenceNumber
+      }
+    }
+  });
+});
+
 async function initializeSequenceNumber() {
   const result = await query(`
     PREFIX gr: <http://purl.org/goodrelations/v1#>
