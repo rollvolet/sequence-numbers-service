@@ -1,6 +1,6 @@
 {
   "name": "sequence-number-service",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Microservice generating sequence numbers for resources",
   "main": "app.js",
   "scripts": {
